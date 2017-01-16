@@ -9,6 +9,19 @@ To pull the `centos/rh-nginx-18-centos7` image, run the following command as roo
 docker pull centos/rh-nginx-18-centos7
 ```
 
+S2I build support
+-------------
+Nginx configuration can be extended using S2I tool.
+S2I build folder structure:
+
+|    Folder name         |    Description                            |
+| :--------------------- | ----------------------------------------- |
+|  ./nginx-cfg/*.conf     | Should contain all nginx configuration we want to include into image |
+
+Execution:
+
+s2i build --context-dir=. centos/nginx-18-centos7 your-image-name
+
 
 Configuration
 -------------
